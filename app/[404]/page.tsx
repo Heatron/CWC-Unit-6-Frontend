@@ -3,8 +3,8 @@ import { Metadata } from "next";
 
 
 export const metadata: Metadata = {
-  title: "Hot Beans | Not Found",
-  description: "Where developers can find jobs and grow their careers and tallents.",
+  title: "Hot Beans | 404 Not Found",
+  description: "Skyrocket Your Success",
 };
 
 export default function Home() {

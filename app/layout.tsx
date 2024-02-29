@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { GeistSans } from 'geist/font/sans';
 import { cn } from "@/lib/utils";
+import { Toaster } from "@/components/ui/toaster"
 import { ThemeProvider } from "@/components/theme-provider"
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
@@ -18,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={cn("min-h-screen bg-background font-sans antialiased", GeistSans.variable)}>
       <body>
+
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -27,7 +29,9 @@ export default function RootLayout({
           <NavigationBar/>
           {children}
         </ThemeProvider>  
+        <Toaster />
       </body>
     </html>
   );
 }
+

@@ -1,14 +1,18 @@
 import Image from "next/image";
 import { Metadata } from "next";
+import { useState } from 'react';
 
 import SparklesHero from "@/components/home-brew-ui/Sparkels";
 import ShowNotTell from "@/components/home-page/show-not-tell";
 import CeoQuote from "@/components/home-page/ceo-quote";
+import FAQ from "@/components/home-page/faq";
+import CalendarForm from "@/components/home-page/book-a-call"
+
 
 
 export const metadata: Metadata = {
-  title: "Hot Beans | Careers",
-  description: "Where developers can find jobs and grow their careers and tallents.",
+  title: "Hot Beans | Home",
+  description: "Skyrocket Your Success",
 };
 
 export default function Home() {
@@ -16,13 +20,16 @@ export default function Home() {
   return (
     <>
       <main>
+        <div id="trailer">
+        
+        </div>
         <SparklesHero/>
-        <div className="py-6 px-6 lg:px-12 lg:py-12  dark:bg-[#191919] bg-[#dfe9e9] dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex">
+        <div className="py-12 px-6 lg:px-12 lg:py-12 bg-gradient-to-b from-[#ffffff] to-[#dbe8ff] dark:bg-gradient-to-b dark:from-[#030712] dark:to-[#ff9124] relative">
           <div className="relative z-10">
-            <ShowNotTell/>
-            <CeoQuote/>
+            <CalendarForm />
+            <FAQ />
           </div>
-          <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-[#191919] bg-[#dfe9e9] [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+          <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-[#030712] bg-[#afccff] [mask-image:linear-gradient(ellipse_at_center,transparent_20%,black)]"></div>
         </div>
       </main>
     </>
