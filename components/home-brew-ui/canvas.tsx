@@ -120,14 +120,14 @@ export default function LineDrawer() {
       mouseRef.current.y = undefined;
     };
 
-    window.addEventListener('resize', resizeReset);
-    window.addEventListener('mousemove', mousemove);
-    window.addEventListener('mouseout', mouseout);
+    canvasRef.current.addEventListener('resize', resizeReset);
+    canvasRef.current.addEventListener('mousemove', mousemove);
+    canvasRef.current.addEventListener('mouseout', mouseout);
 
     return () => {
-      window.removeEventListener('resize', resizeReset);
-      window.removeEventListener('mousemove', mousemove);
-      window.removeEventListener('mouseout', mouseout);
+      canvasRef.current.removeEventListener('resize', resizeReset);
+      canvasRef.current.removeEventListener('mousemove', mousemove);
+      canvasRef.current.removeEventListener('mouseout', mouseout);
     };
   }, []);
 
